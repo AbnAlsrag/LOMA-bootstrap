@@ -1,0 +1,8 @@
+# import hello
+
+void main() {
+    i64 x = 5;
+    x = 7;
+
+    printf("HELLO, FUCK! (%d)\n", x);
+}

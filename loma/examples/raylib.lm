@@ -1,0 +1,24 @@
+export struct Color {
+    u8 r;
+    u8 g;
+    u8 b;
+    u8 a;
+}
+
+export struct Rectangle {
+    f32 x;
+    f32 y;
+    f32 width;
+    f32 height;
+}
+
+export @symbol void InitWindow(i32 width, i32 height, const cstring title);
+export @symbol void SetTargetFPS(i32 fps);
+export @symbol bool WindowShouldClose();
+export @symbol bool IsKeyDown(i32 key);
+export @symbol Color GetColor(u32 hex_value);
+export @symbol void ClearBackground(Color color);
+export @symbol void BeginDrawing();
+export @symbol void DrawRectangleRec(Rectangle rect, Color color);
+export @symbol void EndDrawing();
+export @symbol void CloseWindow();

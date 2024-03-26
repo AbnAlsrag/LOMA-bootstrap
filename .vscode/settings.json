@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.lm": "loma",
+        "cstdint": "c",
+        "stdint.h": "c",
+        "stdio.h": "c",
+        "raylib.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}

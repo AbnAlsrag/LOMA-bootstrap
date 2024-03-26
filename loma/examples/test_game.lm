@@ -1,0 +1,41 @@
+import raylib;
+
+export void main() {
+    raylib::InitWindow(500, 500, "test");
+
+    raylib::SetTargetFPS(60);
+
+    const u32 background_color = 0xFFFFFFFF;
+
+    raylib::Rectangle rect = {100, 100, 50, 50};
+    u32 rect_color = 0xFF0000FF;
+    f32 rect_speed = 10;
+
+    while !raylib::WindowShouldClose() {
+        if raylib::IsKeyDown(KEY_LEFT) {
+            rect.x -= rect_speed;
+        }
+        
+        if raylib::IsKeyDown(KEY_RIGHT) {
+            rect.x += rect_speed;
+        }
+
+        if raylib::IsKeyDown(KEY_UP) {
+            rect.y -= rect_speed;
+        }
+
+        if IsKeyDown(KEY_DOWN) {
+            rect.y += rect_speed;
+        }
+
+        raylib::ClearBackground(GetColor(background_color));
+
+        raylib::BeginDrawing();
+        
+        raylib::DrawRectangleRec(rect, GetColor(rect_color));
+
+        raylib::EndDrawing();
+    }
+
+    raylib::CloseWindow();    
+}

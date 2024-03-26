@@ -1,0 +1,6 @@
+export @symbol printf(formate str, args any...) i32;
+
+export proc hello() void {
+    printf("Hello, MOM!\n");
+    printf("I LOVE YOU MOM\n");
+}
